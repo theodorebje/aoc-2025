@@ -1,5 +1,7 @@
 use std::str::FromStr;
 
+use crate::dial::Dial;
+
 mod commands;
 mod dial;
 
@@ -14,6 +16,13 @@ fn parse_input() -> Vec<commands::Command> {
 
 fn main() {
     let input = parse_input();
-
-    println!("{input:#?}");
+    let mut dial = Dial::new();
+    let mut count: u8 = 0;
+    for command in input {
+        dial = dial.apply(command);
+        if dial.is_zero() {
+            count += 1;
+        }
+    }
+    println!("Password: {count}");
 }

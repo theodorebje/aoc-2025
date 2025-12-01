@@ -16,6 +16,10 @@ impl Dial {
             Direction::Left => self.sub(command.distance),
         }
     }
+
+    pub const fn is_zero(self) -> bool {
+        self.0 == 0
+    }
 }
 
 impl Default for Dial {
