@@ -1,0 +1,22 @@
+[workspace]
+members = [
+    "aoc-2025-day-1"
+]
+resolver = "3"
+
+[workspace.package]
+authors = ["Theodore Bjernhed <uik1475@edu.kunskapsskolan.se>"]
+description = "Advent of Code 2025, in Rust. This is my first time participating in Advent of Code!"
+edition = "2024"
+license = "EUPL-1.2"
+readme = "README.md" # Not the root README.md, but rather the individual README.md files for each package.
+repository = "https://github.com/theodorebje/aoc-2025"
+version = "1.0.0" # Current day of Advent of Code
+
+[workspace.dependencies]
+# Hopefully I will keep this empty…
+
+[workspace.lints.clippy]
+pedantic = "deny"
+nursery = "deny"
+
