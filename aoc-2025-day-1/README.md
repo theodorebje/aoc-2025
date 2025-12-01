@@ -73,8 +73,10 @@ of zeroes naïvely.
 
 #### Time it took me to solve (2)
 
-I haven't solved it yet!
+10 minutes, 15 seconds (00:10:15). I left the codebase in a way worse-off
+position than before, but I'm tired and this means that I get to go to bed, so I
+consider this an absolute win.
 
 #### Source Lines of Code (2)
 
-I haven't solved it yet!
+192 SLoC according to [`scc`](https://github.com/boyter/scc).

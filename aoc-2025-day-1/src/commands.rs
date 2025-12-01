@@ -20,6 +20,7 @@ pub struct Command {
 }
 
 impl Command {
+    #[cfg(test)]
     const fn new(direction: Direction, distance: u32) -> Self {
         Self {
             direction,
