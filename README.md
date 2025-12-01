@@ -13,7 +13,7 @@ dependencies!
 
 ## Solutions
 
-- [Day 1](./aoc-2025-day-1/README.md)
+- [Day 1](./day-1/README.md)
 
 ### Times
 
