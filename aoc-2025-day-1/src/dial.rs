@@ -41,7 +41,12 @@ impl Sub<u32> for Dial {
     type Output = Self;
 
     fn sub(self, rhs: u32) -> Self {
-        todo!()
+        // Rewrite this in idiomatic Rust.
+        let mut num: u32 = u32::from(self.0);
+        for _ in 0..rhs {
+            num = num.checked_sub(1).unwrap_or(99);
+        }
+        Self(num as u8)
     }
 }
 

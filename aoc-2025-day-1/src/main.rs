@@ -17,7 +17,7 @@ fn parse_input() -> Vec<commands::Command> {
 fn main() {
     let input = parse_input();
     let mut dial = Dial::new();
-    let mut count: u8 = 0;
+    let mut count: u32 = 0;
     for command in input {
         dial = dial.apply(command);
         if dial.is_zero() {
