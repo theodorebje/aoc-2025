@@ -1,11 +1,20 @@
 use std::ops::{Add, Sub};
 
-#[derive(Debug, PartialEq, Eq, PartialOrd, Ord)]
+use crate::commands::{Command, Direction};
+
+#[derive(Debug, PartialEq, Eq, PartialOrd, Ord, Clone, Copy)]
 pub struct Dial(u8);
 
 impl Dial {
     pub const fn new() -> Self {
         Self(50)
+    }
+
+    pub fn apply(self, command: Command) -> Self {
+        match command.direction {
+            Direction::Right => self.add(command.distance),
+            Direction::Left => self.sub(command.distance),
+        }
     }
 }
 

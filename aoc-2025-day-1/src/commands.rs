@@ -1,20 +1,22 @@
 use std::str::FromStr;
 
-#[derive(Debug)]
+#[derive(Debug, Clone, Copy)]
 pub enum ParseError {
     MeNoLikey,
 }
 
-#[derive(Debug, PartialEq, Eq, PartialOrd, Ord)]
-enum Direction {
+#[derive(Debug, PartialEq, Eq, PartialOrd, Ord, Clone, Copy)]
+pub enum Direction {
+    /// Increase
     Right,
+    /// Decrease
     Left,
 }
 
-#[derive(Debug, PartialEq, Eq, PartialOrd, Ord)]
+#[derive(Debug, PartialEq, Eq, PartialOrd, Ord, Clone, Copy)]
 pub struct Command {
-    direction: Direction,
-    distance: u32,
+    pub direction: Direction,
+    pub distance: u32,
 }
 
 impl Command {
