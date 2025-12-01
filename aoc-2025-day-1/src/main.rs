@@ -1,3 +1,5 @@
+mod dial;
+
 #[allow(dead_code)]
 const INPUT: &str = include_str!("../input.txt");
 
