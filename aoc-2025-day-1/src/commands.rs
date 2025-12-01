@@ -1,7 +1,7 @@
 use std::str::FromStr;
 
 #[derive(Debug)]
-enum ParseError {
+pub enum ParseError {
     MeNoLikey,
 }
 
@@ -12,7 +12,7 @@ enum Direction {
 }
 
 #[derive(Debug, PartialEq, Eq, PartialOrd, Ord)]
-struct Command {
+pub struct Command {
     direction: Direction,
     distance: u32,
 }
