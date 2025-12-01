@@ -1,3 +1,4 @@
+mod commands;
 mod dial;
 
 #[allow(dead_code)]
