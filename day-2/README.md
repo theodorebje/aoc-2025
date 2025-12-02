@@ -48,11 +48,25 @@ I'll revisit my solutions later?
 
 #### Time it took me to solve (1)
 
-I haven't solved it yet!
+9 minutes and 9 seconds (00:09:09). It really shows in the code that I was
+trying to just pump out a working solution as quickly as possible, although I
+was trying to stay calm and collected to be able to false asleep better whenever
+I finish this puzzle.
 
 #### Source Lines of Code (1)
 
-I haven't solved it yet!
+25 SLoC according to [`scc`](https://github.com/boyter/scc).
+
+I also found these stats quite amusing:
+
+```txt
+Estimated Cost to Develop (organic) $561
+Estimated Schedule Effort (organic) 0.80 months
+Estimated People Required (organic) 0.06
+```
+
+If anyone's interested in sending over $561 for full ownership rights of these
+fine 25 lines, hit me up! My email is in the git commit message.
 
 ## Part 2
 
