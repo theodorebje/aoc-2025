@@ -26,6 +26,7 @@ shorter than for part 1.
 | Day |    Total     |    Part 1    |  Part 2  |
 | --- | ------------ | ------------ | -------- |
 |   1 | 01:16:16[^1] | 01:06:01[^1] | 00:10:15 |
+|   2 |     00:32:40 |     00:09:09 | 00:23:31 |
 
 [^1]: Including time to write commit message.
 
@@ -36,6 +37,7 @@ This is only for Rust code.
 | Day | Part 1 | Part 2 |
 | --- | ------ | ------ |
 |   1 |    174 |    192 |
+|   2 |     25 |    126 |
 
 ## Licence
 
