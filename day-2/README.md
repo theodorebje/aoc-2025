@@ -100,8 +100,21 @@ looking for solutions): brute force all possible combinations.
 
 #### Time it took me to solve (2)
 
-I haven't solved it yet!
+23 minutes and 31 seconds (00:23:31). Wow. Even though it took me a long while
+to cobble together this mess of a solution, the code is absolutely vile. Yuck!
+Enter the [src](./src/) directory at your own risk!
+
+I also have to confess a sin: I googled. I know, I know. I sinned. But I was
+just way too tired to try to figure out how to check if all elements of a slice
+are equal to each other. I found
+[this](https://sts10.github.io/2019/06/06/is-all-equal-function.html) great post
+with many fantastic examples, and I ended up using one by
+[Sergey Bugaev](https://github.com/bugaevc). It saved me so much time, thank you
+so much mr. Bugaev.
 
 #### Source Lines of Code (2)
 
-I haven't solved it yet!
+126 SLoC according to [`scc`](https://github.com/boyter/scc). 126 lines of
+stinking, vile, disgusting Rust code. Not proud, not proud.
+
+Anyway, I am so tired, I am heading straight to bed. See ya tomorrow!
