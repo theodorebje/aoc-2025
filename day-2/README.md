@@ -72,16 +72,36 @@ fine 25 lines, hit me up! My email is in the git commit message.
 
 ### Problem (2)
 
-TODO
+We can no longer use our "split in half" solution, because we now want to check
+if a value has any number of repeating characters. Previously, 111 would be a
+valid value, but now we have to reject that. We also have to reject e.g. 121212.
+
+How do we solve this? No idea. Yes, I am typing this out as I am trying to solve
+the problem in my head. Maybe there's some standard library way to do this
+(probably not). Let me check...
+
+No, of course not. Why would there be one?
+
+I genuinely can't think of a good solution for this problem, and I'm not sure
+whether that is because it's a difficult problem or because I am extremely
+tired. Probably both.
+
+My hacky solution (please don't copy this solution if you are reading this and
+looking for solutions): brute force all possible combinations.
 
 ### Steps to solve (2)
 
-TODO
+(Continuing from step 3 on part 1):
+
+1. Loop through the length of the string
+2. Split it `j` times.
+3. Check if all splits are equal.
+4. If not, move on to next length.
 
 #### Time it took me to solve (2)
 
-TODO
+I haven't solved it yet!
 
 #### Source Lines of Code (2)
 
-TODO
+I haven't solved it yet!
