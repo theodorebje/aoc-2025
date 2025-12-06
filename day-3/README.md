@@ -56,11 +56,17 @@ Simply add up these numbers to get our answer.
 
 #### Time it took me to solve (1)
 
-I haven't solved it yet!
+So, slight problem… I took a quick little break, and I might have – how do I put
+this? – forgotten to turn the stopwatch back on? I genuinely have no idea how
+long it took, so I am just going to round it to an hour and leave a nice
+footnote in the statistics. Let's hope I don't mess up with the stopwatch again
+in the future!
 
 #### Source Lines of Code (1)
 
-I haven't solved it yet!
+Now this is data that I do actually have! 54 SLoC according to
+[`scc`](https://github.com/boyter/scc). And I am actually quite proud of the
+code I wrote this time, although it took a good while to debug.
 
 ## Part 2
 
