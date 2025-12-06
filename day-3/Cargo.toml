@@ -8,6 +8,7 @@ repository.workspace = true
 version.workspace = true
 
 [dependencies]
+aoc-2025-globals.workspace = true
 # Will I be able to keep it empty today? Who knows!
 
 [lints]

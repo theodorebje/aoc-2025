@@ -1,3 +1,4 @@
+use aoc_2025_globals::Solution;
 use clap::{Parser, Subcommand};
 use pastey::paste;
 
@@ -31,7 +32,7 @@ impl Args {
     pub fn entry(&self) {
         let day = self.day;
         let part = self.part;
-        match_challenges!(day, part, []);
+        match_challenges!(day, part, [1, 2, 3]);
     }
 }
 

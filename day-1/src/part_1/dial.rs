@@ -1,10 +1,5 @@
-use crate::commands::{Command, Direction};
-use std::{
-    ops::{Add, Sub},
-    sync::Mutex,
-};
-
-static ZERO_COUNT: Mutex<u32> = Mutex::new(0);
+use crate::shared::commands::{Command, Direction};
+use std::ops::{Add, Sub};
 
 #[derive(Debug, PartialEq, Eq, PartialOrd, Ord, Clone, Copy)]
 pub struct Dial(u8);
@@ -20,6 +15,10 @@ impl Dial {
             Direction::Left => self.sub(command.distance),
         }
     }
+
+    pub const fn is_zero(self) -> bool {
+        self.0 == 0
+    }
 }
 
 impl Default for Dial {
@@ -28,29 +27,12 @@ impl Default for Dial {
     }
 }
 
-fn add_mutex() {
-    let mut data = ZERO_COUNT.lock().expect("unable to grab lock");
-    *data += 1;
-}
-
-pub fn get_count() -> u32 {
-    *ZERO_COUNT.lock().expect("unable to grab lock")
-}
-
 impl Add<u32> for Dial {
     type Output = Self;
 
     fn add(self, rhs: u32) -> Self {
-        let mut num: u32 = u32::from(self.0);
-        for _ in 0..rhs {
-            num += 1;
-            if num == 100 {
-                num = 0;
-                add_mutex();
-            }
-        }
-        #[allow(clippy::cast_possible_truncation)]
-        Self(num as u8)
+        let simple = (rhs + u32::from(self.0)) % 100;
+        Self(simple as u8)
     }
 }
 
@@ -58,12 +40,10 @@ impl Sub<u32> for Dial {
     type Output = Self;
 
     fn sub(self, rhs: u32) -> Self {
+        // Rewrite this in idiomatic Rust.
         let mut num: u32 = u32::from(self.0);
         for _ in 0..rhs {
             num = num.checked_sub(1).unwrap_or(99);
-            if num == 0 {
-                add_mutex();
-            }
         }
         #[allow(clippy::cast_possible_truncation)]
         Self(num as u8)
