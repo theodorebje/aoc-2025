@@ -55,18 +55,22 @@ I finish this puzzle.
 
 #### Source Lines of Code (1)
 
-25 SLoC according to [`scc`](https://github.com/boyter/scc).
+39 SLoC according to [`scc`](https://github.com/boyter/scc).
 
 I also found these stats quite amusing:
 
 ```txt
-Estimated Cost to Develop (organic) $561
-Estimated Schedule Effort (organic) 0.80 months
-Estimated People Required (organic) 0.06
+Estimated Cost to Develop (organic) $895
+Estimated Schedule Effort (organic) 0.96 months
+Estimated People Required (organic) 0.08
 ```
 
-If anyone's interested in sending over $561 for full ownership rights of these
-fine 25 lines, hit me up! My email is in the git commit message.
+If anyone's interested in sending over $895 for full ownership rights of these
+fine 39 lines, hit me up! My email is in the git commit message.
+
+>omg 39!! is that a miku reference?!?11+?
+>
+>―Theodore from the future
 
 ## Part 2
 
@@ -114,7 +118,7 @@ so much mr. Bugaev.
 
 #### Source Lines of Code (2)
 
-126 SLoC according to [`scc`](https://github.com/boyter/scc). 126 lines of
+45 SLoC according to [`scc`](https://github.com/boyter/scc). 45 lines of
 stinking, vile, disgusting Rust code. Not proud, not proud.
 
 Anyway, I am so tired, I am heading straight to bed. See ya tomorrow!

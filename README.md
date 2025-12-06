@@ -37,8 +37,8 @@ This is only for Rust code.
 
 | Day | Part 1 | Part 2 |
 | --- | ------ | ------ |
-|   1 |    174 |    192 |
-|   2 |     25 |    126 |
+|   1 |    188 |    211 |
+|   2 |     39 |     45 |
 
 ## Licence
 

@@ -50,7 +50,7 @@ comment in `src/dial.rs` for that. Let's hope Part 2 is easier!
 
 #### Source Lines of Code (1)
 
-174 SLoC according to [`scc`](https://github.com/boyter/scc).
+188 SLoC according to [`scc`](https://github.com/boyter/scc).
 
 ## Part 2
 
@@ -79,4 +79,4 @@ consider this an absolute win.
 
 #### Source Lines of Code (2)
 
-192 SLoC according to [`scc`](https://github.com/boyter/scc).
+211 SLoC according to [`scc`](https://github.com/boyter/scc).
