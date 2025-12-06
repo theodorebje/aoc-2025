@@ -15,5 +15,9 @@ run *arguments:
 check:
     cargo check --workspace
 
+[no-cd]
+scc exclude_part:
+    scc -i rs --exclude-dir part_{{exclude_part}}
+
 watchexec *arguments:
     watchexec -r -e rs,jinja -- bash -c 'clear && just test && clear && just run-rust {{arguments}}'
