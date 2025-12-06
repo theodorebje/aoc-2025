@@ -1,6 +1,6 @@
 [package]
 name = "aoc-2025-runner"
-description.workspace = true
+description = "Theodore's Advent of Code 2025 code runner and test suite"
 edition.workspace = true
 license.workspace = true
 readme.workspace = true
@@ -8,6 +8,9 @@ repository.workspace = true
 version.workspace = true
 
 [dependencies]
+aoc-2025-globals.workspace = true
+clap = { version = "4.5.53", features = ["derive"] }
+pastey = "0.2.0"
 
 [lints]
 workspace = true
