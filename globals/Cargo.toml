@@ -1,0 +1,13 @@
+[package]
+name = "aoc-2025-globals"
+description = "Theodore's Advent of Code 2025 Globals"
+edition.workspace = true
+license.workspace = true
+readme.workspace = true
+repository.workspace = true
+version.workspace = true
+
+[dependencies]
+
+[lints]
+workspace = true

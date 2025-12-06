@@ -3,6 +3,7 @@ members = [
     "day-1",
     "day-2",
     "day-3",
+    "globals",
     "runner",
 ]
 default-members = ["runner"]
@@ -18,7 +19,7 @@ repository = "https://github.com/theodorebje/aoc-2025"
 version = "1.0.0" # Current day of Advent of Code
 
 [workspace.dependencies]
-# Hopefully I will keep this empty…
+aoc-2025-globals = { path = "globals" }
 
 [workspace.lints.clippy]
 pedantic = "deny"
