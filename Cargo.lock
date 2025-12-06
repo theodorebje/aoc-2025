@@ -13,3 +13,7 @@ version = "1.0.0"
 [[package]]
 name = "aoc-2025-day-3"
 version = "1.0.0"
+
+[[package]]
+name = "aoc-2025-runner"
+version = "1.0.0"
