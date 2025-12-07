@@ -146,7 +146,7 @@ still have been a challenge.
 
 #### Source Lines of Code (2)
 
-101 SLoC according to [`scc`](https://github.com/boyter/scc). Also quite
+100 SLoC according to [`scc`](https://github.com/boyter/scc). Also quite
 readable. Overall, I think I left myself a very solid foundation for myself with
 part 1's code, I just didn't possess enough mutable Rust knowledge to harness
 that solid foundation in time.

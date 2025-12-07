@@ -40,7 +40,6 @@ impl Solution for Part2 {
         let mut total_removed = 0;
 
         while let Some(removed) = grid.remove_accessible_rolls() {
-            println!("Removed {removed} rolls");
             total_removed += removed.get();
         }
 
