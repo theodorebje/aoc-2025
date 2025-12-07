@@ -28,8 +28,10 @@ shorter than for part 1.
 | --- | ------------ | ------------ | -------- |
 |   1 | 01:16:16[^1] | 01:06:01[^1] | 00:10:15 |
 |   2 |     00:32:40 |     00:09:09 | 00:23:31 |
+|   3 | 02:04:19[^2] | 01:00:00[^2] | 01:04:19 |
 
 [^1]: Including time to write commit message.
+[^2]: Forgot to turn on the stopwatch… This is a guess.
 
 ### Source Lines of Code
 
@@ -39,6 +41,7 @@ This is only for Rust code.
 | --- | ------ | ------ |
 |   1 |    188 |    211 |
 |   2 |     39 |     45 |
+|   3 |     54 |    135 |
 
 ## Licence
 
