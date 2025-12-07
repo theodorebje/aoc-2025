@@ -74,6 +74,13 @@ dependencies = [
 ]
 
 [[package]]
+name = "aoc-2025-day-4"
+version = "1.0.0"
+dependencies = [
+ "aoc-2025-globals",
+]
+
+[[package]]
 name = "aoc-2025-globals"
 version = "1.0.0"
 

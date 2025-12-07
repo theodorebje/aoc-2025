@@ -1,0 +1,15 @@
+[package]
+name = "aoc-2025-day-4"
+description.workspace = true
+edition.workspace = true
+license.workspace = true
+readme.workspace = true
+repository.workspace = true
+version.workspace = true
+
+[dependencies]
+aoc-2025-globals.workspace = true
+# Will I be able to keep it empty today? Who knows!
+
+[lints]
+workspace = true
