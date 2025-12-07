@@ -71,7 +71,7 @@ used that thing in over a year. I had to lookup the man page for it.
 
 #### Source Lines of Code (1)
 
-113 SLoC according to [`scc`](https://github.com/boyter/scc). I mean, it's very
+119 SLoC according to [`scc`](https://github.com/boyter/scc). I mean, it's very
 readable. But that's not a lot of lines for how long I spent on this problem.
 
 ## Part 2
@@ -106,8 +106,47 @@ minutes, but you can always hope, I guess?
 
 #### Time it took me to solve (2)
 
-I haven't solved it yet!
+NOOOOO I JYNXED IT!!! IT TOOK 16 MINUETES AND 42 SECONDS.
+
+the worst part is that I solved the problem somewhere around the 7 minute mark,
+but I got hit in the face with the infamous
+[`E0502`](https://doc.rust-lang.org/error_codes/E0502.html):
+
+```rust
+error[E0502]: cannot borrow `*self` as immutable because it is also borrowed as mutable
+  --> day-4/src/part_2/mod.rs:76:45
+   |
+73 |         for (y, row) in self.0.iter_mut().enumerate() {
+   |                         -----------------------------
+   |                         |
+   |                         mutable borrow occurs here
+   |                         mutable borrow later used here
+...
+76 |                     let count = Cell::rolls(self.adjacent(x, y));
+   |                                             ^^^^ immutable borrow occurs here
+```
+
+I rarely use mutable borrows in the Rust code that I personally write, so I
+wasn't immidiately sure how to solve the problem. Once I had finally fixed it,
+it was already too late. I had failed my sub-10 minute challenge.
+
+Why did I set it at sub-10??? It would have been slightly more possible with
+sub-15 (I stopped trying a bit once it passed the 10-minute mark). Sub-15 would
+still have been a challenge.
+
+*Sigh*. I'll leave you with this quote.
+
+>>Don't jynx it!1!1!!
+>>
+>>―Theodore from the future (probably, this is still present me)
+>
+>Indeed, past me did jynx it.
+>
+>―Real Theodore from the future
 
 #### Source Lines of Code (2)
 
-I haven't solved it yet!
+101 SLoC according to [`scc`](https://github.com/boyter/scc). Also quite
+readable. Overall, I think I left myself a very solid foundation for myself with
+part 1's code, I just didn't possess enough mutable Rust knowledge to harness
+that solid foundation in time.

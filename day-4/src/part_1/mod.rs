@@ -1,55 +1,10 @@
-use crate::INPUT;
+use crate::{
+    INPUT,
+    shared::{Cell, Grid, MAX_ADJACENT_ROLLS, parse_input},
+};
 use aoc_2025_globals::{Output, Solution};
 
-const MAX_ADJACENT_ROLLS: usize = 4;
-
-#[derive(Clone, Copy, PartialEq, Eq)]
-enum Cell {
-    Wall,
-    Empty,
-    Roll,
-}
-
-impl Cell {
-    fn rolls(adjacent: [&Self; 8]) -> usize {
-        adjacent.iter().filter(|cell| cell == &&&Self::Roll).count()
-    }
-}
-
-struct Grid(Vec<Vec<Cell>>);
-
-impl FromIterator<Vec<Cell>> for Grid {
-    fn from_iter<T: IntoIterator<Item = Vec<Cell>>>(iter: T) -> Self {
-        Self(iter.into_iter().collect())
-    }
-}
-
 impl Grid {
-    #[rustfmt::skip]
-    const ADJACENT_OFFSETS: [(isize, isize); 8] = [
-        (-1, -1), (-1, 0), (-1, 1),
-        ( 0, -1),          ( 0, 1),
-        ( 1, -1), ( 1, 0), ( 1, 1),
-    ];
-
-    fn get(&self, x: usize, y: usize) -> Option<&Cell> {
-        self.0.get(y).and_then(|row| row.get(x))
-    }
-
-    fn adjacent(&self, x: usize, y: usize) -> [&Cell; 8] {
-        std::array::from_fn(|index| {
-            let (change_x, change_y) = Self::ADJACENT_OFFSETS[index];
-            if let (Some(x), Some(y)) = (
-                x.checked_add_signed(change_y),
-                y.checked_add_signed(change_x),
-            ) {
-                self.get(x, y).unwrap_or(&Cell::Wall)
-            } else {
-                &Cell::Wall
-            }
-        })
-    }
-
     fn count_accessible_cells(&self) -> u32 {
         let mut accessible = 0;
 
@@ -66,21 +21,6 @@ impl Grid {
 
         accessible
     }
-}
-
-fn parse_input(input: &'static str) -> Grid {
-    input
-        .lines()
-        .map(|line| {
-            line.bytes()
-                .map(|symbol| match symbol {
-                    b'@' => Cell::Roll,
-                    b'.' => Cell::Empty,
-                    other => panic!("unsupported character {other}"),
-                })
-                .collect::<Vec<Cell>>()
-        })
-        .collect()
 }
 
 pub struct Part1;
