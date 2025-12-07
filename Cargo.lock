@@ -91,6 +91,7 @@ dependencies = [
  "aoc-2025-day-1",
  "aoc-2025-day-2",
  "aoc-2025-day-3",
+ "aoc-2025-day-4",
  "aoc-2025-globals",
  "clap",
  "pastey",
