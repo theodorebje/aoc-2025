@@ -57,7 +57,7 @@ Simply add up these numbers to get our answer.
 #### Time it took me to solve (1)
 
 So, slight problem… I took a quick little break, and I might have – how do I put
-this? – forgotten to turn the stopwatch back on? I genuinely have no idea how
+this…? – forgotten to turn the stopwatch back on? I genuinely have no idea how
 long it took, so I am just going to round it to an hour and leave a nice
 footnote in the statistics. Let's hope I don't mess up with the stopwatch again
 in the future!
@@ -72,16 +72,30 @@ code I wrote this time, although it took a good while to debug.
 
 ### Problem (2)
 
-TODO
+¡We need more power! Instead of the two batteries per bank required from part 1,
+we now need a whopping **12** per bank!!! I'll have to completely rethink how to
+structure my code, because I had hardcoded the two batteries per bank into my
+code, and hardcoding 12 batteries will be unsustainable.
 
 ### Steps to solve (2)
 
-TODO
+1. Store an array of batteries instead
+2. Find the twelve largest numbers
+3. Add them together!
 
 #### Time it took me to solve (2)
 
-I haven't solved it yet!
+1 hour, 4 minutes, 19 seconds (01:04:19). Part 2 was really difficult, as it
+involved refactoring most of the code. It was really fun, though! And as a
+cherry on the top, I got to learn about the `fold` method, which I had never
+used before. The code is actually way more readable than I thought it would turn
+out. Somehow I also resisted the urge to just write a macro, too, so that's
+cool, I guess.
 
 #### Source Lines of Code (2)
 
-I haven't solved it yet!
+135 SLoC according to [`scc`](https://github.com/boyter/scc). A tad longer, but
+still surprisingly readable. I have no guilt at all with putting my name behind
+this code, even though there is some unsafe thrown in there. But, hey, we need
+those performance gains, right!? (ignore the fact that I don't even have a way
+to benchmark my solutions yet lol)
