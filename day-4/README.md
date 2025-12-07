@@ -1,4 +1,4 @@
-# Day 3: Printing Department
+# Day 4: Printing Department
 
 Link: <https://adventofcode.com/2025/day/4>
 
@@ -51,17 +51,41 @@ want to finish more than one challenge today.
 
 #### Time it took me to solve (1)
 
-I haven't solved it yet!
+Remember what I said about being a little bit quicker today? Let's get an
+instant replay of what I said:
+>I am going to try to be a little bit quicker than on day 3, because I really
+>want to finish more than one challenge today.
+>
+>―Theodore, a few hours earlier
+
+Yeah, that didn't work out.
+
+One. Hour. Fourty-four. Minutes. Fifty-eight. Seconds.
+
+this was ~~a bit~~ **WAY** more challenging than I expected
+
+Debugging this challenge made up roughly 90% of the time I spent on this
+problem, I would say. I hated it. It even made me whip out GDB, and I haven't
+used that thing in over a year. I had to lookup the man page for it.
 
 #### Source Lines of Code (1)
 
-I haven't solved it yet!
+113 SLoC according to [`scc`](https://github.com/boyter/scc). I mean, it's very
+readable. But that's not a lot of lines for how long I spent on this problem.
 
 ## Part 2
 
 ### Problem (2)
 
-TODO
+Speedrun time! I am going to try to get sub-10 minutes on this one. I have a
+sneaking suspicion that I will regret saying that, but what is Advent of Code
+without some self-imposed rules? I need some sort of punishment for if I fail,
+though… Hmm, no sugar for a day. That won't feel too punishing if I through
+inexplicable means somehow fail??
+
+>Don't jynx it!1!1!!
+>
+>―Theodore from the future (probably, this is still present me)
 
 ### Steps to solve (2)
 
