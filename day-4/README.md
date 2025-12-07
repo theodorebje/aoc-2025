@@ -12,16 +12,17 @@ Link: <https://adventofcode.com/2025/day/4>
 ### Problem (1)
 
 It's time for grids adjacent cells, everyone! Our input is very simple this
-time, consisting of only periods (`.`, `U+002E`) and at-symbols
-(`@`, `U+0040`), which make up a grid.
+time, consisting of only periods (`.`, `U+002E`) for empty space and at-symbols
+(`@`, `U+0040`) for rolls of paper, which make up a grid.
 
-For each at-symbol, we need to count the number of adjacent cells that are
-*also* at-symbols. If there are only 3 or less at-symbols in the eight adjacent
-cells, we should increment a counter which we return at the end.
+For each roll of paper, we need to count the number of adjacent cells that are
+*also* taken up by a roll of paper. If there are only 3 or less rolls of paper
+in the eight adjacent cells, we mark the targeted roll of paper as "accessible",
+and we increment a counter which we return at the end.
 
 >[!NOTE]
->If an at-symbol is at the edge of the grid, we can assume that the grid edges
->are also made out of periods.
+>If a roll of paper is at the edge of the grid, we can assume that the grid
+>edges are also made out of empty space.
 
 Here's an example input:
 
@@ -46,7 +47,7 @@ want to finish more than one challenge today.
 
 1. Implement grid
 2. Implement way to get adjacent cells to cell
-3. For each at-symbol, check if adjacent cells have <4 at-symbols
+3. For each roll of paper, check if adjacent cells have <4 rolls of paper
 4. If so, increment counter
 
 #### Time it took me to solve (1)
@@ -87,9 +88,21 @@ inexplicable means somehow fail??
 >
 >―Theodore from the future (probably, this is still present me)
 
+Okay, so we need to remove the rolls that we determined are accessible, and then
+repeat the algorithm again until there are no more accessible rolls of paper.
+
+Instead of counting the number of accessible rolls of paper, we are supposed to
+count the total number of rolls of paper that we have removed from the grid.
+
+I can already feel that this is definitely not going to take less than 10
+minutes, but you can always hope, I guess?
+
 ### Steps to solve (2)
 
-TODO
+1. Remove accessible rolles of paper
+2. Count how many you removed
+3. Feed the new grid into accessible-roll-remover algorithm again
+4. Repeat
 
 #### Time it took me to solve (2)
 
