@@ -70,11 +70,64 @@ I suspect that this will be an extremely easy challenge.
 
 #### Time it took me to solve (1)
 
-TODO
+16 minutes and 26 seconds. Easy-peasy-lemon-squeezy.
+
+While searching for if I spelled that idiom correctly (I did!) I found out that
+you can
+[apparently say "Easy-peasy-Japanesey" instead](https://idiomorigins.org/origin/easy-peasylemon-squeezyjapanesey),
+which I found very interesting, and I am definitely going to start saying that
+from now on! The Japanesey version is apparently an Aussie idiom too! This idiom
+only gets better an better. I should start using idioms more often…
+
+It took me a little longer than I would have liked to, simply because I was
+debugging why this line didn't work:
+
+```rust
+if fresh.0.iter().any(|range| matches!(ingredient, range)) { /* … */ }
+```
+
+This simply returned `true` for each and every element in `fresh`, which seemed
+like a bug in the `matches!` macro to me at the time, but now that I have the
+time to sift through the code, I realise that it just expands to this:
+
+```rust
+if fresh.0.iter().any(|range| {
+    match ingredient {
+        range => true,
+        _ => false,
+    }
+}) { /* … */ }
+```
+
+If you know anything about the `match` syntax, chances are that you immediately
+see the problem at hand. Let me show you another use of match to make it even
+more obvious:
+
+```rust
+match binary {
+    0 => false,
+    1 => true,
+    other => panic!("Not binary: {other}"),
+}
+```
+
+Effectively, both of the match arms have become
+[catch-all's](https://doc.rust-lang.org/book/ch06-02-match.html#catch-all-patterns-and-the-_-placeholder),
+with the only difference being that the first arm assigns the ingredient to the
+`other` binding, which is immediately dropped.
+
+For anyone wondering, the way're supposed to check if a number is in a range
+that's stored in a variable is:
+
+```rust
+if fresh.0.iter().any(|range| range.contains(&ingredient)) { /* */ }
+```
 
 #### Source Lines of Code (1)
 
-TODO
+45 SLoC according to [`scc`](https://github.com/boyter/scc). And I would say
+that it's 45 lines of very readable and pretty code too. I'm proud of my work
+here. Let's see if I'll still be proud at the end of part 2.
 
 ## Part 2
 
