@@ -13,6 +13,7 @@ aoc-2025-day-1 = { path = "../day-1" }
 aoc-2025-day-2 = { path = "../day-2" }
 aoc-2025-day-3 = { path = "../day-3" }
 aoc-2025-day-4 = { path = "../day-4" }
+aoc-2025-day-5 = { path = "../day-5" }
 clap = { version = "4.5.53", features = ["derive"] }
 pastey = "0.2.0"
 

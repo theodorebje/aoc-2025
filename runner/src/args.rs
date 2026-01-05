@@ -32,7 +32,7 @@ impl Args {
     pub fn entry(&self) {
         let day = self.day;
         let part = self.part;
-        match_challenges!(day, part, [1, 2, 3, 4]);
+        match_challenges!(day, part, [1, 2, 3, 4, 5]);
     }
 }
 
