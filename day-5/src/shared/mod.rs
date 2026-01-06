@@ -1,4 +1,4 @@
-use std::{collections::HashSet, ops::RangeInclusive};
+use std::{collections::HashSet, range::RangeInclusive};
 
 pub type Id = u64;
 
@@ -13,9 +13,9 @@ pub fn parse_input(input: &'static str) -> (FreshSet, IngredientSet) {
             .lines()
             .map(|line| {
                 let (fx, tx) = line.split_once('-').unwrap();
-                let f = fx.parse().unwrap();
-                let t = tx.parse().unwrap();
-                f..=t
+                let start = fx.parse().unwrap();
+                let last = tx.parse().unwrap();
+                RangeInclusive { start, last }
             })
             .collect::<HashSet<_>>(),
     );

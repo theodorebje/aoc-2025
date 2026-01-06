@@ -17,6 +17,7 @@ dependencies!
 - [Day 2](./day-2/README.md)
 - [Day 3](./day-3/README.md)
 - [Day 4](./day-4/README.md)
+- [Day 5](./day-5/README.md)
 
 ### Times
 
@@ -31,6 +32,7 @@ shorter than for part 1.
 |   2 |     00:32:40 |     00:09:09 | 00:23:31 |
 |   3 | 02:04:19[^2] | 01:00:00[^2] | 01:04:19 |
 |   4 |     02:01:40 |     01:44:58 | 00:16:42 |
+|   5 |     01:58:58 |     00:16:26 | 01:42:32 |
 
 [^1]: Including time to write commit message.
 [^2]: Forgot to turn on the stopwatch… This is a guess.
@@ -45,6 +47,7 @@ This is only for Rust code.
 |   2 |     39 |     45 |
 |   3 |     54 |    135 |
 |   4 |    119 |    100 |
+|   5 |     46 |     98 |
 
 ## Licence
 

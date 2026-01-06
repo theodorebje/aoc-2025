@@ -1,3 +1,4 @@
+#![feature(new_range_api)]
 pub mod part_1;
 pub mod part_2;
 mod shared;

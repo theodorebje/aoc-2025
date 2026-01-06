@@ -30,7 +30,7 @@ can overlap. The list of ranges is not sorted.
 The second list contains the ingredient IDs that we are working with. Our job is
 to count how many ingredients are fresh. Note that the list of ingredient IDs is
 not continuous, e.g. it can go from 1 to 3, skipping ingredient #2. The list of
-ingredient IDs are sorted.
+ingredient IDs is ~~sorted~~ **NOT** sorted.
 
 Here's an example input:
 
@@ -72,12 +72,12 @@ I suspect that this will be an extremely easy challenge.
 
 16 minutes and 26 seconds. Easy-peasy-lemon-squeezy.
 
-While searching for if I spelled that idiom correctly (I did!) I found out that
-you can
-[apparently say "Easy-peasy-Japanesey" instead](https://idiomorigins.org/origin/easy-peasylemon-squeezyjapanesey),
-which I found very interesting, and I am definitely going to start saying that
-from now on! The Japanesey version is apparently an Aussie idiom too! This idiom
-only gets better an better. I should start using idioms more often…
+>While searching for if I spelled that idiom correctly (I did!), I found out
+>that you can
+>[apparently say "Easy-peasy-Japanesey" instead](https://idiomorigins.org/origin/easy-peasylemon-squeezyjapanesey),
+>which I found very interesting, and I am definitely going to start saying that
+>from now on! The Japanesey version is apparently an Aussie idiom too! This
+>idiom only gets better and better!! I should start using idioms more often…
 
 It took me a little longer than I would have liked to, simply because I was
 debugging why this line didn't work:
@@ -125,24 +125,104 @@ if fresh.0.iter().any(|range| range.contains(&ingredient)) { /* */ }
 
 #### Source Lines of Code (1)
 
-45 SLoC according to [`scc`](https://github.com/boyter/scc). And I would say
-that it's 45 lines of very readable and pretty code too. I'm proud of my work
+46 SLoC according to [`scc`](https://github.com/boyter/scc). And I would say
+that it's 46 lines of very readable and pretty code too. I'm proud of my work
 here. Let's see if I'll still be proud at the end of part 2.
 
 ## Part 2
 
 ### Problem (2)
 
-TODO
+Now we are going to ignore the second list, and just count the max number of
+fresh ingredients possible.
+
+I'm going for sub 30 seconds on this one.
 
 ### Steps to solve (2)
 
-TODO
+1. Just count it?
 
 #### Time it took me to solve (2)
 
-TODO
+Wow. Just wow. I was absolutely scammed out of my time. Let me retell this story
+to you before I show you how long it took.
+
+>Hey, Theodore from the future here. *I wrote all of this below me???* Holy moly
+>what a rant. I'm putting this in a collapsible section. Open at your own risk
+>
+>―Theodore from the future
+
+<details>
+
+<summary>Yap yap yap yap</summary>
+
+Okay, so it might be true that I jynxed it. I don't think I really understood
+what the problem was about? It took about 8 minutes (IIRC) to create the initial
+version.
+
+The funny thing is, if you compare that version that I wrote after 8
+minutes with the version that I have right now, you'll notice that only a few
+lines changed (why am I saying notice? I don't even have the original version stored
+anywhere except for in my head). In fact, IIRC, I can count the number of lines
+changed on one hand.
+
+How long can it take to change, what, max 5 lines of code?????
+
+Apparently very.
+
+So, I may or may not have thought that there couldn't be any duplicate range
+starts. My thoughts were incorrect. There were duplicate range starts. "Why is
+that bad?", you may ask. I was storing the range starts in a
+[BTreeSet](https://doc.rust-lang.org/nightly/std/collections/struct.BTreeSet.html)
+while prototyping the whole thing. There can't be duplicates keys a
+`*Map` / `*Set`. But Rust is fail-fast, right? So, of course I would realise my
+mistake pretty quickly and fix it right away. That is, if it had failed fast.
+This is the method signature of
+[`BTreeSet::insert`](https://doc.rust-lang.org/nightly/std/collections/struct.BTreeSet.html#method.insert):
+
+```rust
+#[stable(feature = "rust1", since = "1.0.0")]
+#[rustc_confusables("push", "put")]
+pub fn insert(&mut self, value: T) -> bool
+```
+
+It returns a boolean. And there is no
+[`#\[must_use\]`](https://doc.rust-lang.org/reference/attributes/diagnostics.html#the-must_use-attribute)
+attribute on booleans. And the attribute is not present on the insert method
+either. Since I was trying to prototype as quickly as possible, I didn't notice
+that I had to check the return value!!! And yes, this is my official request to
+the Rust `std` library maintainers; **please** mark
+[`BTreeSet::insert`](https://doc.rust-lang.org/nightly/std/collections/struct.BTreeSet.html#method.insert)
+as
+[`#\[must_use\]`](https://doc.rust-lang.org/reference/attributes/diagnostics.html#the-must_use-attribute)!
+
+I kind of went mad trying to debug why my code wasn't
+working correctly. All of my tests passed, because the example ranges on the AOC
+page say *NOTHING* about duplicate range starts, only overlapping ranges (which
+I was handling properly). But it's just the examples that don't show every
+edge-case, right? Surely, the actual problem text on the AOC page mentions the
+duplicate range starts, right? Right???? NO!! I was up until 1 AM trying to
+debug this piece of `꧁✬◦°⋆⋆°◦. schite ◦°⋆⋆°◦✬꧂` (pardonen mi Middel
+Englisch) (sorry that was very cringe, I regret typing that out).
+
+If it wasn't obvious, I'm just a tiny bit frustrated…
+
+</details>
+
+Oh, look at the time! No, not the clock on the wall! The time it took me to
+code together this! Or rather debug it, because most of the the time it took me
+to finish this was just debugging.
+
+If you count me sleeping (yes, I did give up at 1 AM and hit the sack) and doing
+other non-productive stuff, I estimate it took me ~18 hours (I don't know, I
+didn't count my snores). If you don't count my highly productive snoring, it
+took one hour, 42 minutes, and 32 seconds.
+
+🙂
 
 #### Source Lines of Code (2)
 
-TODO
+At the height of my debugging frenzy, I was at 126 SLoC according to
+[`scc`](https://github.com/boyter/scc). With my code properly cleaned up, I am
+at 98 SLoC. I don't remember if I counted tests for the other days, but if you
+don't count tests, it's 67 SLoC.
