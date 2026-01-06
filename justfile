@@ -1,16 +1,11 @@
 test:
     cargo test --workspace
 
-build-rust:
+build:
     cargo build --workspace
 
-build: build-rust
-
-run-rust *arguments:
-    cargo run -- {{arguments}}
-
 run *arguments:
-    just run-rust {{arguments}}
+    cargo run -- {{arguments}}
 
 check:
     cargo check --workspace
@@ -20,4 +15,4 @@ scc exclude_part:
     scc -i rs --exclude-dir part_{{exclude_part}}
 
 watchexec *arguments:
-    watchexec -r -e rs,jinja -- bash -c 'clear && just test && clear && just run-rust {{arguments}}'
+    watchexec -r -e rs -- bash -c 'clear && just test && clear && just run {{arguments}}'
